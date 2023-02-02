@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get('/product/:code', (req, res) => {
   const code = req.params.code
-  const fileName = `${process.env.PRODUCTS_DIR}/${code}.json`
+  const fileName = `${process.env.PRODUCTS_DIR}/${code}`
   console.log(code, fileName)
   if (!code) {
     res.status(400).send(JSON.stringify({
